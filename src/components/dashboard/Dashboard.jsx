@@ -1,10 +1,18 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class Dashboard extends Component {
+    constructor(props) {
+        super(props);
+        
+    }
+    
     render() {
         return (
             <div>
-                Dashboard
+                <Link to='/wizard'>
+                    <button>Add New Property</button>
+                </Link>
             </div>
         );
     }
