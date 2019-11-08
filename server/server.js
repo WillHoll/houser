@@ -7,6 +7,8 @@ const ctrl = require('./controller');
 
 const app = express();
 
+app.get('/api/houses', ctrl.getHouses)
+
 
 massive(CONNECTION_STRING).then(db => {
     app.set('db', db)
