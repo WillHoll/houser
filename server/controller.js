@@ -5,9 +5,9 @@ module.exports = {
         return res.status(200).send(houses)
     },
     makeHouse: (req, res) => {
-        const {name, address, city, state, zipcode} = req.body
+        const {name, address, city, state, zipcode, houseImg, mortgage, rent} = req.body
         const db = req.app.get('db')
-        db.post_house([name, address, city, state, zipcode])
+        db.post_house([name, address, city, state, zipcode, houseImg, mortgage, rent])
         .then(() => {
             res.sendStatus(200);
         })

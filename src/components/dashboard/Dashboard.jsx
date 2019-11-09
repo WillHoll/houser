@@ -43,7 +43,7 @@ componentDidMount() {
         return (
             <div>
                 {display}
-                <Link to='/wizard'>
+                <Link to='/wizard/step1'>
                     <button>Add New Property</button>
                 </Link>
             </div>
