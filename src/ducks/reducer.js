@@ -55,7 +55,7 @@ function reducer(state = initialState, action) {
 export function updateStep1(name, address, city, state, zipcode){
     return {
         type: UPDATE_STEP1,
-        payload: name, address, city, state, zipcode
+        payload: {name, address, city, state, zipcode}
     }
 }
 
@@ -69,7 +69,7 @@ export function updateStep2(houseImg) {
 export function updateStep3(mortgage, rent) {
     return {
         type: UPDATE_STEP3,
-        payload: mortgage, rent
+        payload: {mortgage, rent}
     }
 }
 
