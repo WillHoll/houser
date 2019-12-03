@@ -31,7 +31,7 @@ class Step3 extends Component {
     render() {
         console.log(this.props)
         const { mortgage, rent } = this.state
-        const { updateStep3 } = this.props
+        const { name, address, city, state, zipcode, houseImg, updateStep3 } = this.props
         return (
             <div>
                 <div>
@@ -46,7 +46,7 @@ class Step3 extends Component {
                     <Link to='/wizard/step2'>
                         <button onClick={() => updateStep3(mortgage, rent)}>&lt;&lt;Previous Step</button>
                     </Link>
-                    <button onClick={() => this.completeHandle()}>Complete</button>
+                    <button onClick={() => this.completeHandle(name, address, city, state, zipcode, houseImg, mortgage, rent)}>Complete</button>
                 </nav>
             </div>
         );
@@ -54,8 +54,14 @@ class Step3 extends Component {
 }
 
 function mapStateToProps(reduxState) {
-    const {mortgage, rent} = reduxState
+    const {name, address, city, state, zipcode, houseImg, mortgage, rent} = reduxState
     return {
+        name,
+        address,
+        city,
+        state,
+        zipcode,
+        houseImg,
         mortgage,
         rent
     }

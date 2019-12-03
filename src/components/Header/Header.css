@@ -1,0 +1,25 @@
+.header, .header-div{
+  display: flex;
+  align-items: center;
+}
+.header{
+  background: #519872;
+  margin: 0;
+  height: 3.5rem;
+  justify-content: center;
+}
+.header-div {
+  justify-content: flex-start;
+  width: 750px;
+  height: 100%;
+}
+
+h3 {
+  margin: 0;
+}
+.img {
+  height: 80%;
+  width: auto;
+  background: #fff;
+
+}
